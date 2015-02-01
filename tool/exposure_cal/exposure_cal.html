@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Exposure Calculation</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/common.css">
+    <script src="javascripts/file_handler.js" type="text/javascript" charset="gb2312"></script>
+    <script src="javascripts/exposure_cal.js" type="text/javascript" charset="gb2312"></script>
+</head>
+<body>
+<div id="wrapper">
+    <header id="main_header" class="marquee">
+        <h1>曝光值计算器</h1>
+    </header>
+    <div id="container">
+        <section id="main_section">
+            <p class="note">请选择感光度
+            <select id="ISOSel" onchange="initSubOpt('ISOSel','ApertSel')">
+            </select>
+            </p>
+            <br>
+            <p class="note">请选择该感光度下对应的光圈
+            <select id="ApertSel" onchange="findExp('ExpDiv', 'CombTbl', 'ISOSel', 'ShutSel', 'ApertSel')">
+            </select>
+            </p>
+            <br>
+            <p class="note">请选择快门
+            <select id="ShutSel" onchange="findExp('ExpDiv', 'CombTbl', 'ISOSel', 'ShutSel', 'ApertSel')">
+            </select>
+            </p>
+            <br>
+            <p id="ExpDiv" class="result"></p>
+            <br>
+            <p class="result">在相同感光度下，下列“光圈+快门”的组合也能得到同样的曝光值</p>
+            <table id="CombTbl" border=2>
+            </table>
+        </section>
+        <footer id="ft1">
+        </footer>
+        <footer id="ft2">
+        </footer>
+    </div>
+</div>
+</body>
+</html>
