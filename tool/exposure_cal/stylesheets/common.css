@@ -22,18 +22,6 @@ body{
     display: -o-box;
     display: box;
     
-    -moz-box-pack: center;
-    -webkit-box-pack: center;
-    -ms-box-pack: center;
-    -o-box-pack: center;
-    box-pack: center;
-    
-    -moz-box-align: center;
-    -webkit-box-align: center;
-    -ms-box-align: center;
-    -o-box-align: center;
-    box-align: center;
-
     -moz-border-radius: 1px;
     -webkit-border-radius: 1px;
     -ms-border-radius: 1px;
@@ -93,6 +81,12 @@ body{
 @media only screen and (-webkit-min-device-pixel-ratio : 1.5) and (orientation:landscape), only screen and (min-device-pixel-ratio : 1.5) and (orientation:landscape){
     body {
         height: 100%;
+        -moz-box-pack: start;
+        -webkit-box-pack: start;
+        -ms-box-pack: start;
+        -o-box-pack: start;
+        box-pack: start;
+        
         background: gray;
     }
 }
@@ -101,6 +95,14 @@ body{
 @media only screen and (-webkit-min-device-pixel-ratio : 1.5) and (orientation:portrait), only screen and (min-device-pixel-ratio : 1.5) and (orientation:portrait){
 	body {
         width: 100%;
+        background: yellow;
+        
+        -moz-box-align: start;
+        -webkit-box-align: start;
+        -ms-box-align: start;
+        -o-box-align: start;
+        box-align: start;
+        
         background: yellow;
     }
 }
